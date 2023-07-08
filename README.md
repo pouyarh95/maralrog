@@ -47,7 +47,7 @@ PRIVATEKEY="APrivateKey1zkpDB23cwgPtPuyLBLgBrLdmARC1QdnbkAb4a5zkr8tW5S1"
 RECORD="{
   owner: aleo16tczu3pcr5h78z69yzyq56x3nlurumsyj469mu947anhzyr68uxsm32fuv.private,
   microcredits: 50000000u64.private,
-  _nonce: 5032100277167342040260173171061902530580724592385289212460248604268795605979group.public
+  _nonce: 2120230241095403491600241531012123554533180656289241288836698536806171214406group.public
 }"
 
 snarkos developer deploy "${APPNAME}.aleo" --private-key "${PRIVATEKEY}" --query "https://vm.aleo.org/api" --path "./${APPNAME}/build/" --broadcast "https://vm.aleo.org/api/testnet3/transaction/broadcast" --fee 600000 --record "${RECORD}"

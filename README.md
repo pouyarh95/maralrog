@@ -32,7 +32,7 @@ cd $HOME
 
 mkdir demo_deploy_Leo_app && cd demo_deploy_Leo_app
 
-WALLETADDRESS="aleo16tczu3pcr5h78z69yzyq56x3nlurumsyj469mu947anhzyr68uxsm32fuv"
+WALLETADDRESS=""
 
 APPNAME=helloworld_"${WALLETADDRESS:4:6}"
 
@@ -42,13 +42,9 @@ PATHTOAPP=$(realpath -q $APPNAME)
 
 cd $PATHTOAPP && cd ..
 
-PRIVATEKEY="APrivateKey1zkpDB23cwgPtPuyLBLgBrLdmARC1QdnbkAb4a5zkr8tW5S1"
+PRIVATEKEY=""
 
-RECORD="{
-  owner: aleo16tczu3pcr5h78z69yzyq56x3nlurumsyj469mu947anhzyr68uxsm32fuv.private,
-  microcredits: 50000000u64.private,
-  _nonce: 2120230241095403491600241531012123554533180656289241288836698536806171214406group.public
-}"
+RECORD=""
 
 snarkos developer deploy "${APPNAME}.aleo" --private-key "${PRIVATEKEY}" --query "https://vm.aleo.org/api" --path "./${APPNAME}/build/" --broadcast "https://vm.aleo.org/api/testnet3/transaction/broadcast" --fee 600000 --record "${RECORD}"
 
